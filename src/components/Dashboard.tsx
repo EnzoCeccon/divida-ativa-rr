@@ -105,42 +105,72 @@ const Dashboard: React.FC = () => {
              {/* Cabeçalho com imagem personalizada */}
        <Box sx={{ 
          position: 'relative',
-         borderBottom: '2px solid #ddd'
+         borderBottom: '2px solid #ddd',
+         background: 'linear-gradient(135deg, #1976d2 0%, #1565c0 100%)',
+         padding: '20px'
        }}>
-                   {/* Imagem do cabeçalho */}
-          <img 
-            src="/nota.svg" 
-            alt="Cabeçalho Controladoria Geral do Estado de Roraima" 
-            style={{ 
-              width: '100%', 
-              height: '120px',
-              objectFit: 'cover',
-              display: 'block'
-            }} 
-            onError={(e) => {
-              // Fallback se a imagem não existir
-              e.currentTarget.style.display = 'none';
-            }}
-          />
-         
-         {/* Barra de ações sobreposta */}
+         {/* Logo e título */}
          <Box sx={{ 
-           position: 'absolute',
-           top: '10px',
-           right: '20px',
-           background: 'rgba(255,255,255,0.9)',
-           borderRadius: '4px',
-           padding: '4px'
+           display: 'flex', 
+           alignItems: 'center', 
+           justifyContent: 'space-between',
+           maxWidth: '1200px',
+           margin: '0 auto'
          }}>
-           <IconButton 
-             onClick={loadData}
-             sx={{ 
-               color: '#1976d2',
-               '&:hover': { background: '#e3f2fd' }
-             }}
-           >
-             <Refresh />
-           </IconButton>
+           {/* Logo */}
+           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+             <img 
+               src="/logo.svg" 
+               alt="Logo Dívida Ativa" 
+               style={{ 
+                 height: '50px',
+                 filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))'
+               }} 
+               onError={(e) => {
+                 // Fallback se o logo não existir
+                 e.currentTarget.style.display = 'none';
+               }}
+             />
+             <Box>
+               <Typography 
+                 variant="h4" 
+                 sx={{ 
+                   color: 'white', 
+                   fontWeight: 'bold',
+                   textShadow: '0 2px 4px rgba(0,0,0,0.3)'
+                 }}
+               >
+                 Dívida Ativa
+               </Typography>
+               <Typography 
+                 variant="subtitle1" 
+                 sx={{ 
+                   color: '#e3f2fd',
+                   fontWeight: 300
+                 }}
+               >
+                 Dashboard de Controle
+               </Typography>
+             </Box>
+           </Box>
+           
+           {/* Barra de ações */}
+           <Box sx={{ 
+             background: 'rgba(255,255,255,0.1)',
+             borderRadius: '8px',
+             padding: '8px',
+             backdropFilter: 'blur(10px)'
+           }}>
+             <IconButton 
+               onClick={loadData}
+               sx={{ 
+                 color: 'white',
+                 '&:hover': { background: 'rgba(255,255,255,0.2)' }
+               }}
+             >
+               <Refresh />
+             </IconButton>
+           </Box>
          </Box>
        </Box>
 
@@ -149,7 +179,7 @@ const Dashboard: React.FC = () => {
            flexGrow: 1, 
            p: { xs: 1, sm: 2, md: 3 },
            overflow: 'auto',
-           height: 'calc(100vh - 140px)' // Ajustado para a nova altura do cabeçalho com imagem
+           height: 'calc(100vh - 100px)' // Ajustado para a nova altura do cabeçalho com logo
          }}>
         {/* Cards de métricas - Responsivos */}
         <Grid container spacing={isMobile ? 1 : 2} sx={{ mb: 3 }}>
