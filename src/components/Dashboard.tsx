@@ -6,8 +6,6 @@ import {
   Grid, 
   Card, 
   CardContent,
-  AppBar,
-  Toolbar,
   CircularProgress,
   Alert,
   Table,
@@ -21,7 +19,6 @@ import {
   useMediaQuery,
   IconButton,
   Chip,
-  Stack,
   TextField,
   InputAdornment
 } from '@mui/material';
@@ -43,7 +40,7 @@ const Dashboard: React.FC = () => {
   
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
+
 
   const loadData = async () => {
     try {
