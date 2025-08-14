@@ -190,6 +190,13 @@ npm run build
 2. Ative GitHub Pages nas configurações
 3. Configure a branch de deploy
 
+### Deploy no Firebase
+1. Crie um projeto no [Firebase Console](https://console.firebase.google.com/)
+2. Instale o Firebase CLI: `npm install -g firebase-tools`
+3. Faça login: `firebase login`
+4. Inicialize o projeto: `firebase init hosting`
+5. Deploy: `npm run deploy`
+
 ### Deploy no Vercel
 1. Conecte o repositório ao Vercel
 2. Configure as variáveis de ambiente
