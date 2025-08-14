@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura do Projeto - Dívida Ativa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .structure-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .file-tree {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            border-left: 4px solid #3498db;
+        }
+        
+        .folder {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .file {
+            color: #2c3e50;
+        }
+        
+        .file.tsx {
+            color: #2980b9;
+        }
+        
+        .file.ts {
+            color: #8e44ad;
+        }
+        
+        .file.json {
+            color: #f39c12;
+        }
+        
+        .file.md {
+            color: #27ae60;
+        }
+        
+        .file.html {
+            color: #e67e22;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tech-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tech-card h3 {
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .description h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .description li {
+            padding: 8px 0;
+            border-bottom: 1px solid #bdc3c7;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .description li:before {
+            content: "▶";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+        
+        .description li:last-child {
+            border-bottom: none;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .status.ready {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .status.pending {
+            background: #f39c12;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📁 Estrutura do Projeto</h1>
+            <p>Dívida Ativa - Dashboard</p>
+        </div>
+        
+        <div class="content">
+            <div class="structure-section">
+                <h2 class="section-title">🌳 Estrutura de Arquivos</h2>
+                <div class="file-tree">
+divida-ativa/
+├── 📁 src/
+│   ├── 📁 components/
+│   │   └── 📄 Dashboard.tsx <span class="status ready">✅ Pronto</span>
+│   ├── 📁 services/
+│   │   └── 📄 firebase.ts <span class="status ready">✅ Pronto</span>
+│   ├── 📁 types/
+│   │   └── 📄 index.ts <span class="status ready">✅ Pronto</span>
+│   ├── 📁 config/
+│   │   └── 📄 constants.ts <span class="status ready">✅ Pronto</span>
+│   ├── 📄 App.tsx <span class="status ready">✅ Pronto</span>
+│   ├── 📄 main.tsx <span class="status ready">✅ Pronto</span>
+│   ├── 📄 index.css <span class="status ready">✅ Pronto</span>
+│   └── 📄 theme.ts <span class="status ready">✅ Pronto</span>
+├── 📄 index.html <span class="status ready">✅ Pronto</span>
+├── 📄 package.json <span class="status pending">⏳ Configurar</span>
+├── 📄 tsconfig.json <span class="status ready">✅ Pronto</span>
+├── 📄 tsconfig.node.json <span class="status ready">✅ Pronto</span>
+├── 📄 vite.config.ts <span class="status ready">✅ Pronto</span>
+└── 📄 README.md <span class="status ready">✅ Pronto</span>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2 class="section-title">⚙️ Stack Tecnológico</h2>
+                <div class="tech-stack">
+                    <div class="tech-card">
+                        <h3>React 18</h3>
+                        <p>Framework principal</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>TypeScript</h3>
+                        <p>Tipagem estática</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>Material-UI</h3>
+                        <p>Componentes UI</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>Firebase</h3>
+                        <p>Backend & Database</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>Vite</h3>
+                        <p>Build tool</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2 class="section-title">📋 Funcionalidades Implementadas</h2>
+                <div class="description">
+                    <h3>Dashboard Principal</h3>
+                    <ul>
+                        <li>Interface moderna com Material-UI</li>
+                        <li>Cards de métricas principais (Total em Dívida, Processos Ativos, Valor Recuperado, Contribuintes)</li>
+                        <li>Layout responsivo com Grid system</li>
+                        <li>AppBar com navegação</li>
+                        <li>Tema personalizado</li>
+                    </ul>
+                    
+                    <h3>Estrutura de Dados</h3>
+                    <ul>
+                        <li>Tipos TypeScript para DívidaAtiva, Contribuinte e Processo</li>
+                        <li>Configurações centralizadas</li>
+                        <li>Serviços Firebase preparados</li>
+                    </ul>
+                    
+                    <h3>Configuração</h3>
+                    <ul>
+                        <li>Vite configurado para desenvolvimento</li>
+                        <li>TypeScript configurado</li>
+                        <li>Estrutura de pastas organizada</li>
+                        <li>Documentação completa</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2 class="section-title">🚀 Próximos Passos</h2>
+                <div class="description">
+                    <ul>
+                        <li>Configurar dependências no package.json</li>
+                        <li>Configurar credenciais do Firebase</li>
+                        <li>Adicionar tabelas de dados</li>
+                        <li>Implementar gráficos e relatórios</li>
+                        <li>Criar formulários de cadastro</li>
+                        <li>Adicionar autenticação de usuários</li>
+                        <li>Implementar filtros e busca</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

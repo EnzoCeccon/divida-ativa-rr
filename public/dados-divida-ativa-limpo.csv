@@ -1,0 +1,88 @@
+# ========================================
+# DADOS DE EXEMPLO - DÍVIDA ATIVA
+# ========================================
+
+# TABELA: CONTRIBUINTES
+# Campos: id_contribuinte,nome,cpf_cnpj,email,telefone,endereco,cidade,estado,cep
+id_contribuinte,nome,cpf_cnpj,email,telefone,endereco,cidade,estado,cep
+1,João Silva Santos,123.456.789-01,joao.silva@email.com,(11) 99999-1111,Rua das Flores 123,São Paulo,SP,01234-567
+2,Maria Oliveira Costa,987.654.321-00,maria.oliveira@email.com,(11) 88888-2222,Av. Paulista 456,São Paulo,SP,01310-100
+3,Empresa ABC Ltda,12.345.678/0001-90,contato@empresaabc.com,(11) 77777-3333,Rua Augusta 789,São Paulo,SP,01205-000
+4,Pedro Santos Lima,111.222.333-44,pedro.santos@email.com,(11) 66666-4444,Rua Consolação 321,São Paulo,SP,01302-001
+5,Ana Paula Ferreira,555.666.777-88,ana.ferreira@email.com,(11) 55555-5555,Av. Brigadeiro Faria Lima 654,São Paulo,SP,01452-002
+6,Empresa XYZ S.A.,98.765.432/0001-10,financeiro@xyz.com,(11) 44444-6666,Rua Oscar Freire 987,São Paulo,SP,01426-003
+7,Carlos Eduardo Silva,999.888.777-66,carlos.silva@email.com,(11) 33333-7777,Rua Haddock Lobo 147,São Paulo,SP,01414-004
+8,Juliana Costa Santos,777.666.555-44,juliana.costa@email.com,(11) 22222-8888,Av. Rebouças 258,São Paulo,SP,05402-005
+9,Empresa Delta Comércio Ltda,11.222.333/0001-44,admin@delta.com,(11) 11111-9999,Rua Teodoro Sampaio 369,São Paulo,SP,05406-006
+10,Ricardo Almeida Lima,333.444.555-66,ricardo.almeida@email.com,(11) 00000-0000,Av. Sumaré 741,São Paulo,SP,01258-007
+
+# TABELA: DÍVIDAS
+# Campos: id_divida,id_contribuinte,valor_original,valor_atual,data_vencimento,data_inclusao,status,tipo_tributo,descricao
+id_divida,id_contribuinte,valor_original,valor_atual,data_vencimento,data_inclusao,status,tipo_tributo,descricao
+1,1,15000.00,18750.00,2023-01-15,2023-02-01,ATIVA,IPTU,Dívida de IPTU 2023
+2,2,8500.00,10625.00,2023-03-20,2023-04-01,ATIVA,ISS,Dívida de ISS 2023
+3,3,45000.00,56250.00,2023-02-10,2023-03-01,ATIVA,IPTU,Dívida de IPTU 2023
+4,4,12000.00,15000.00,2023-04-05,2023-05-01,ATIVA,ISS,Dívida de ISS 2023
+5,5,8000.00,10000.00,2023-01-30,2023-02-15,ATIVA,IPTU,Dívida de IPTU 2023
+6,6,75000.00,93750.00,2023-03-15,2023-04-01,ATIVA,ISS,Dívida de ISS 2023
+7,7,9500.00,11875.00,2023-02-25,2023-03-10,ATIVA,IPTU,Dívida de IPTU 2023
+8,8,18000.00,22500.00,2023-04-10,2023-05-01,ATIVA,ISS,Dívida de ISS 2023
+9,9,35000.00,43750.00,2023-01-20,2023-02-01,ATIVA,IPTU,Dívida de IPTU 2023
+10,10,6500.00,8125.00,2023-03-30,2023-04-15,ATIVA,ISS,Dívida de ISS 2023
+11,1,25000.00,31250.00,2022-12-15,2023-01-01,ATIVA,IPTU,Dívida de IPTU 2022
+12,2,15000.00,18750.00,2022-11-20,2022-12-01,ATIVA,ISS,Dívida de ISS 2022
+13,3,60000.00,75000.00,2022-10-10,2022-11-01,ATIVA,IPTU,Dívida de IPTU 2022
+14,4,20000.00,25000.00,2022-12-05,2023-01-01,ATIVA,ISS,Dívida de ISS 2022
+15,5,12000.00,15000.00,2022-11-30,2022-12-15,ATIVA,IPTU,Dívida de IPTU 2022
+
+# TABELA: PROCESSOS
+# Campos: id_processo,id_divida,numero_processo,data_abertura,status_processo,valor_processo,advogado,observacoes
+id_processo,id_divida,numero_processo,data_abertura,status_processo,valor_processo,advogado,observacoes
+1,1,2023/001234,2023-03-01,EM_ANDAMENTO,18750.00,Dr. Carlos Mendes,Processo em fase de execução
+2,2,2023/001235,2023-04-15,EM_ANDAMENTO,10625.00,Dr. Ana Paula Silva,Processo em fase de execução
+3,3,2023/001236,2023-03-20,EM_ANDAMENTO,56250.00,Dr. Roberto Santos,Processo em fase de execução
+4,4,2023/001237,2023-05-20,EM_ANDAMENTO,15000.00,Dr. Maria Costa,Processo em fase de execução
+5,5,2023/001238,2023-03-10,EM_ANDAMENTO,10000.00,Dr. João Oliveira,Processo em fase de execução
+6,6,2023/001239,2023-04-25,EM_ANDAMENTO,93750.00,Dr. Pedro Lima,Processo em fase de execução
+7,7,2023/001240,2023-04-05,EM_ANDAMENTO,11875.00,Dr. Juliana Ferreira,Processo em fase de execução
+8,8,2023/001241,2023-05-25,EM_ANDAMENTO,22500.00,Dr. Ricardo Almeida,Processo em fase de execução
+9,9,2023/001242,2023-03-05,EM_ANDAMENTO,43750.00,Dr. Carlos Eduardo,Processo em fase de execução
+10,10,2023/001243,2023-05-10,EM_ANDAMENTO,8125.00,Dr. Ana Silva,Processo em fase de execução
+11,11,2023/001244,2023-02-01,EM_ANDAMENTO,31250.00,Dr. Roberto Mendes,Processo em fase de execução
+12,12,2023/001245,2023-01-15,EM_ANDAMENTO,18750.00,Dr. Maria Paula,Processo em fase de execução
+13,13,2023/001246,2023-01-20,EM_ANDAMENTO,75000.00,Dr. João Carlos,Processo em fase de execução
+14,14,2023/001247,2023-02-05,EM_ANDAMENTO,25000.00,Dr. Pedro Roberto,Processo em fase de execução
+15,15,2023/001248,2023-01-30,EM_ANDAMENTO,15000.00,Dr. Juliana Ana,Processo em fase de execução
+
+# TABELA: PAGAMENTOS
+# Campos: id_pagamento,id_divida,valor_pago,data_pagamento,forma_pagamento,status_pagamento,observacoes
+id_pagamento,id_divida,valor_pago,data_pagamento,forma_pagamento,status_pagamento,observacoes
+1,1,5000.00,2023-06-15,PIX,CONCLUIDO,Pagamento parcial realizado
+2,2,3000.00,2023-07-20,BOLETO,CONCLUIDO,Pagamento parcial realizado
+3,3,15000.00,2023-08-10,CARTAO_CREDITO,CONCLUIDO,Pagamento parcial realizado
+4,4,5000.00,2023-09-05,PIX,CONCLUIDO,Pagamento parcial realizado
+5,5,3000.00,2023-10-15,BOLETO,CONCLUIDO,Pagamento parcial realizado
+6,6,25000.00,2023-11-20,CARTAO_CREDITO,CONCLUIDO,Pagamento parcial realizado
+7,7,4000.00,2023-12-10,PIX,CONCLUIDO,Pagamento parcial realizado
+8,8,8000.00,2024-01-15,BOLETO,CONCLUIDO,Pagamento parcial realizado
+9,9,12000.00,2024-02-20,CARTAO_CREDITO,CONCLUIDO,Pagamento parcial realizado
+10,10,3000.00,2024-03-10,PIX,CONCLUIDO,Pagamento parcial realizado
+
+# TABELA: PARCELAS
+# Campos: id_parcela,id_divida,numero_parcela,valor_parcela,data_vencimento,status_parcela
+id_parcela,id_divida,numero_parcela,valor_parcela,data_vencimento,status_parcela
+1,1,1,6250.00,2023-06-15,VENCIDA
+2,1,2,6250.00,2023-07-15,VENCIDA
+3,1,3,6250.00,2023-08-15,A_VENCER
+4,2,1,3541.67,2023-07-20,VENCIDA
+5,2,2,3541.67,2023-08-20,VENCIDA
+6,2,3,3541.66,2023-09-20,A_VENCER
+7,3,1,18750.00,2023-06-20,VENCIDA
+8,3,2,18750.00,2023-07-20,VENCIDA
+9,3,3,18750.00,2023-08-20,A_VENCER
+10,4,1,5000.00,2023-08-05,VENCIDA
+11,4,2,5000.00,2023-09-05,VENCIDA
+12,4,3,5000.00,2023-10-05,A_VENCER
+13,5,1,3333.33,2023-06-30,VENCIDA
+14,5,2,3333.33,2023-07-30,VENCIDA
+15,5,3,3333.34,2023-08-30,A_VENCER
